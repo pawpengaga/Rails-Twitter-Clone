@@ -4,6 +4,11 @@ class TweetsController < ApplicationController
   # GET /tweets or /tweets.json
   def index
     @tweets = Tweet.all
+
+    if params[:query_text].present?
+      @tweets = @tweets.search_full_text(params[:query_text])
+    end
+    render layout: 'custom'
   end
 
   # GET /tweets/1 or /tweets/1.json
@@ -17,6 +22,9 @@ class TweetsController < ApplicationController
 
   # GET /tweets/1/edit
   def edit
+  end
+
+  def search #mycontroller
   end
 
   # POST /tweets or /tweets.json

@@ -1,11 +1,8 @@
 <div id="<%= dom_id tweet %>" class="px-4">
-  <p>
-    <span class="fw-bold">Username:</span>
-    <%= tweet.username %>
-  </p>
+  <% num = rand(34..167)%>
+  <p><span class="fw-bold"><%= tweet.username %></span> <span class="username"> @<%= tweet.username %><%=num%>_</span></p>
 
   <p>
-    <span class="fw-bold">Description:</span>
     <%= tweet.description %>
   </p>
 

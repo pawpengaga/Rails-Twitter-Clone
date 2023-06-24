@@ -29,20 +29,30 @@ body {
     font-family: "Helvetica Neue LT";
     font-weight: normal;
 
-    background-color: var(--clear);
+    background-color: var(--dark);
     color: var(--classic);
 }
 
 a{
-    color: var(--twitterpink);
+    text-decoration: none;
+    color: var(--classic);
+}
+
+a:hover{
+    color: var(--twitterblue);
+}
+
+#fake-container{
+    padding-left: 12em;
+    padding-right: 12em;
 }
 
 /****************************************************/
 
 .btntwitter{
     border-radius: 3rem;
-    background-color: var(--twitterpink);
-    border: 1px solid var(--twitterpink);   
+    background-color: var(--twitterblue);
+    border: 1px solid var(--twitterblue);   
 }
 
 .twitter-list{
@@ -61,5 +71,17 @@ a{
 }
 
 .lgroup a:hover{
-    color: var(--twitterpink);
+    color: var(--twitterblue);
+}
+
+/*-----------------------------------*/
+
+.username{
+    color: grey;
+}
+
+.custom-search{
+    border-radius: 2rem;
+    padding-top: 0.70em;
+    padding-bottom: 0.70em;
 }

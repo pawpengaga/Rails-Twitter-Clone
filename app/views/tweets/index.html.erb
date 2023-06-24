@@ -1,4 +1,4 @@
-<div class="container">
+<div id="fake-container">
   <div class="row">
     <div class="col-3 px-5">
       <p style="color: green"><%= notice %></p>
@@ -39,11 +39,11 @@
         </div>      
       </ul>
       <%= link_to "Twittear", new_tweet_path, class: "btn btn-light btntwitter w-100 py-3 fs-5 fw-bold text-white" %>
-      <p class="mt-5">Twitter Clone <br> Un desafío para INFORCAP <br> Erick Rivera - 2023</p>
+      
 
     </div>
     
-    <div class="col-7 border-start border-end mx-0 px-0">
+    <div class="col-6 border-start border-end mx-0 px-0">
       <div id="tweets">
         <div>
           <h2 class="border-bottom py-4 px-4 fw-bold">Inicio</h2>
@@ -52,10 +52,22 @@
         <% @tweets.each do |tweet| %>
           <div class="border-bottom py-4">
             <%= render tweet %>
-            <span class="px-4"><%= link_to "Ver más", tweet %></span>
+            <span class="px-4"><i class="bi bi-eye"></i><%= link_to " Ver más", tweet %></span>
           </div>
         <% end %>
 
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div>
+        <div class="px-4 mt-3">
+          <%= form_with url: tweets_path, method: :get do |form|%>
+            <%= form.text_field :query_text, placeholder: "Busca en Twitter", value: params[:query_text], class: "form-control custom-search"%>
+          <%end%>
+          <hr class="mt-5">
+          <p>Twitter Clone <br> Un desafío para <span class="fw-bold">INFORCAP</span> <br> Erick Rivera - 2023</p>
+        </div>
       </div>
     </div>
 
