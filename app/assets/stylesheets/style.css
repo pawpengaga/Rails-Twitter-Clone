@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "Helvetica Neue LT";
+    src: url('HelveticaNeueLTPro-55Roman.otf');
+    src: url('HelveticaNeueLTPro-75Bold.otf');
+    font-display: swap;
+}
+
+body {
+    font-family: "Helvetica Neue LT";
+}
