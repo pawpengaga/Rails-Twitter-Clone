@@ -39,7 +39,7 @@ a{
 }
 
 a:hover{
-    color: var(--twitterblue);
+    color: var(--twitterpink);
 }
 
 #fake-container{
@@ -47,12 +47,23 @@ a:hover{
     padding-right: 12em;
 }
 
+@media (max-width: 1591px){
+    #fake-container{
+        padding-left: 0.85em;
+        padding-right: 0.85em;
+    }
+}
+
 /****************************************************/
+
+ul{
+    margin:0;
+}
 
 .btntwitter{
     border-radius: 3rem;
-    background-color: var(--twitterblue);
-    border: 1px solid var(--twitterblue);   
+    background-color: var(--twitterpink);
+    border: 1px solid var(--twitterpink);   
 }
 
 .twitter-list{
@@ -71,7 +82,7 @@ a:hover{
 }
 
 .lgroup a:hover{
-    color: var(--twitterblue);
+    color: var(--twitterpink);
 }
 
 /*-----------------------------------*/
@@ -85,3 +96,22 @@ a:hover{
     padding-top: 0.70em;
     padding-bottom: 0.70em;
 }
+
+/*CHEAP STYLE*/
+
+
+.page-link{
+    color: var(--classic);
+    background-color: var(--clear);
+}
+
+.disabled>.page-link{
+    color: var(--classic);
+    background-color: var(--clear);
+}
+
+.active>.page-link{
+    background-color: var(--twitterpink);
+    border-color: var(--twitterpink);
+}
+

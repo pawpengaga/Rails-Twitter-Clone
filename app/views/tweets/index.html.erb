@@ -43,34 +43,51 @@
 
     </div>
     
-    <div class="col-6 border-start border-end mx-0 px-0">
+    <div class="col-6 mx-0 px-0">
       <div id="tweets">
+
+        <% if @tweets.count > 0 %>
         <div>
-          <h2 class="border-bottom py-4 px-4 fw-bold">Inicio</h2>
+          <h2 class="border-bottom border-start border-end py-4 px-4 fw-bold my-0">Inicio</h2>
         </div>
-
-        <% @tweets.each do |tweet| %>
-          <div class="border-bottom py-4">
-            <%= render tweet %>
-            <span class="px-4"><i class="bi bi-eye"></i><%= link_to " Ver más", tweet %></span>
+        <div class="d-flex flex-column align-items-center justify-content-center w-100 border-bottom border-start border-end py-3">
+          <%==raw pagy_bootstrap_nav(@pagy) %>
+        </div>
+        
+        
+          <% @tweets.each do |tweet| %>
+            <div class="border-bottom border-start border-end py-4 mt-0">
+              <%= render tweet %>
+              <span class="px-4"><i class="bi bi-eye"></i><%= link_to " Ver más", tweet %></span>
+            </div>
+          <% end %>
+          <div class="d-flex flex-column align-items-center justify-content-center w-100 border-start border-end py-3">
+            <%==raw pagy_bootstrap_nav(@pagy) %>
           </div>
-        <% end %>
-
+          <%else%>
+            <div>
+              <h2 class="border-bottom py-4 px-4 fw-bold my-0">Inicio</h2>
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center w-100 mt-5">
+              <%= image_tag 'none.png' %>
+              <h3 class="fw-bold w-50 text-center mt-4">No existen resultados para tu búsqueda</h3>
+            </div>
+        <%end%>
       </div>
     </div>
 
-    <div class="col-3">
+    <div class="col-3" id="col-end">
       <div>
         <div class="px-4 mt-3">
           <%= form_with url: tweets_path, method: :get do |form|%>
             <%= form.text_field :query_text, placeholder: "Busca en Twitter", value: params[:query_text], class: "form-control custom-search"%>
           <%end%>
           <hr class="mt-5">
+
           <p>Twitter Clone <br> Un desafío para <span class="fw-bold">INFORCAP</span> <br> Erick Rivera - 2023</p>
         </div>
       </div>
     </div>
-
   </div>
 </div>
 
