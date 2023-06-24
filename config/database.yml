@@ -83,6 +83,4 @@ test:
 #
 production:
   <<: *default
-  database: desafioTwitterClonErickRivera_production
-  username: desafioTwitterClonErickRivera
-  password: <%= ENV["DESAFIOTWITTERCLONERICKRIVERA_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
