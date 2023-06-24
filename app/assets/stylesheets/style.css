@@ -29,17 +29,18 @@ body {
     font-family: "Helvetica Neue LT";
     font-weight: normal;
 
-    background-color: var(--dark);
+    background-color: var(--clear);
     color: var(--classic);
 }
 
 a{
     text-decoration: none;
-    color: var(--classic);
+    color: var(--twitterpink);
 }
 
 a:hover{
-    color: var(--twitterpink);
+    color: var(--classic);
+    text-decoration: underline;
 }
 
 #fake-container{
@@ -53,6 +54,12 @@ a:hover{
         padding-right: 0.85em;
     }
 }
+
+.shame:hover{
+    color: var(--classic);
+    text-decoration: none;
+}
+
 
 /****************************************************/
 
@@ -85,6 +92,10 @@ ul{
     color: var(--twitterpink);
 }
 
+.diss{
+    color: grey;
+}
+
 /*-----------------------------------*/
 
 .username{
@@ -115,3 +126,20 @@ ul{
     border-color: var(--twitterpink);
 }
 
+/***********STYLA**********/
+
+.wi-10{
+    width: 10%;
+}
+.wi-25{
+    width: 25%;
+}
+.wi-50{
+    width: 50%;
+}
+.wi-75{
+    width: 75%;
+}
+.wi-100{
+    width: 100%;
+}
