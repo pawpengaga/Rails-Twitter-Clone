@@ -1,10 +1,65 @@
+:root{
+    --twitterblue: rgb(29, 155, 240);
+    --twitteryellow: rgb(255, 212, 0);
+    --twitterpink: rgb(249, 24, 128);
+    --twitterpurple: rgb(120, 86, 255);
+    --twitterorange: rgb(255, 122, 0);
+    --twittergreen: rgb(0, 186, 124);
+
+    --classic: rgb(255, 255, 255);
+    --clear: rgb(21, 32, 43);
+    --dark: rgb(0, 0, 0);
+}
+
 @font-face {
     font-family: "Helvetica Neue LT";
-    src: url('HelveticaNeueLTPro-55Roman.otf');
-    src: url('HelveticaNeueLTPro-75Bold.otf');
-    font-display: swap;
+    src: url('HelveticaNeueLTPro-55Roman.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Helvetica Neue LT";
+    src: url('HelveticaNeueLTPro-75Bold.otf') format("opentype");
+    font-weight: bold;
+    font-style: normal;
 }
 
 body {
     font-family: "Helvetica Neue LT";
+    font-weight: normal;
+
+    background-color: var(--clear);
+    color: var(--classic);
+}
+
+a{
+    color: var(--twitterpink);
+}
+
+/****************************************************/
+
+.btntwitter{
+    border-radius: 3rem;
+    background-color: var(--twitterpink);
+    border: 1px solid var(--twitterpink);   
+}
+
+.twitter-list{
+    list-style: none;
+    padding: 0;
+}
+
+.twitter-list li i{
+    font-size: 2em;
+    vertical-align: middle;
+}
+
+.lgroup a{
+    color: var(--classic);
+    text-decoration: none;
+}
+
+.lgroup a:hover{
+    color: var(--twitterpink);
 }
