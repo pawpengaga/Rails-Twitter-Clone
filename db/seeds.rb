@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-650.times do |u|
+750.times do |u|
 
     dabMeUp =[
     Faker::GreekPhilosophers.quote,
@@ -19,5 +19,5 @@
     Faker::Coffee.notes
     ]
     
-    Tweet.create(username: Faker::Name.first_name, description: dabMeUp[rand(0..7)])
+    Tweet.create(username: Faker::Name.first_name, description: dabMeUp[rand(0..(dabMeUp.length-1))])
 end

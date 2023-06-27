@@ -35,7 +35,7 @@ body {
 
 a{
     text-decoration: none;
-    color: var(--twitterblue);
+    color: var(--twitterpink);
 }
 
 a:hover{
@@ -69,8 +69,8 @@ ul{
 
 .btntwitter{
     border-radius: 3rem;
-    background-color: var(--twitterblue);
-    border: 1px solid var(--twitterblue);   
+    background-color: var(--twitterpink);
+    border: 1px solid var(--twitterpink);   
 }
 
 .twitter-list{
@@ -89,7 +89,7 @@ ul{
 }
 
 .lgroup a:hover{
-    color: var(--twitterblue);
+    color: var(--twitterpink);
 }
 
 .diss{
@@ -122,8 +122,14 @@ ul{
 }
 
 .active>.page-link{
-    background-color: var(--twitterblue);
-    border-color: var(--twitterblue);
+    background-color: var(--twitterpink);
+    border-color: var(--twitterpink);
+
+}
+
+.page-link:hover{
+    color: var(--twitterpink);
+    text-decoration: none;
 }
 
 /***********STYLA**********/
@@ -142,4 +148,12 @@ ul{
 }
 .wi-100{
     width: 100%;
+}
+
+/*--------------------------------------------*/
+
+.mycol{
+    position: sticky;
+    top: 0;
+    height: 100%;
 }
